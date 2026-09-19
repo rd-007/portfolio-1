@@ -1,7 +1,12 @@
+import DOMPurify from "dompurify";
+import { JSDOM } from "jsdom";
 import Link from "next/link";
 import { Nav, Footer } from "@/components";
 import { getProfile, getProjects, getExperiences, getPublications } from "@/lib/content";
 import type { Experience, Publication } from "@/content/schema";
+
+const window = new JSDOM("").window;
+const purify = DOMPurify(window);
 
 export default async function Home() {
   const [profile, projects, experiences, publications] = await Promise.all([
@@ -10,6 +15,9 @@ export default async function Home() {
     getExperiences(),
     getPublications(),
   ]) as [Awaited<ReturnType<typeof getProfile>>, Awaited<ReturnType<typeof getProjects>>, Experience[], Publication[]];
+
+  const cleanBio = purify.sanitize(profile.bio);
+  const cleanRole = purify.sanitize(profile.role);
 
   const featuredProjects = projects.slice(0, 3);
 
@@ -28,10 +36,10 @@ export default async function Home() {
                 {profile.name}
               </h1>
               <p className="text-h2 text-[var(--text-secondary)] max-w-2xl mb-[var(--space-6)]">
-                {profile.role}
+                {cleanRole}
               </p>
               <p className="text-[var(--text-body)] text-[var(--text-primary)] max-w-2xl mb-[var(--space-8)]">
-                {profile.bio}
+                {cleanBio}
               </p>
               <div className="flex flex-wrap gap-[var(--space-4)]">
                 <a

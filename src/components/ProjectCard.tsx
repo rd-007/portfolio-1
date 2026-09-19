@@ -1,5 +1,6 @@
 "use client";
 
+import DOMPurify from "dompurify";
 import { type AnchorHTMLAttributes } from "react";
 import { TechTag } from "./TechTag";
 import { type Project } from "@/content/schema";
@@ -9,6 +10,10 @@ interface ProjectCardProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 export function ProjectCard({ project, className = "", children, ...props }: ProjectCardProps) {
+  // DOMPurify works natively in browser environment
+  const cleanProblem = DOMPurify.sanitize(project.problem);
+  const cleanOutcome = DOMPurify.sanitize(project.outcome);
+
   return (
     <a
       href={`/projects/${project.slug}`}
@@ -24,10 +29,10 @@ export function ProjectCard({ project, className = "", children, ...props }: Pro
         {project.title}
       </h3>
       <p className="text-[var(--text-body)] text-[var(--text-secondary)] mb-[var(--space-4)] line-clamp-2">
-        {project.problem}
+        {cleanProblem}
       </p>
       <p className="text-[var(--text-small)] text-[var(--text-primary)] font-medium">
-        {project.outcome}
+        {cleanOutcome}
       </p>
       {children}
     </a>
