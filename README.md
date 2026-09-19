@@ -1,7 +1,8 @@
 # Rajit Dakhane — Personal Portfolio
 
 > A fast, accessible, and secure personal portfolio site built to prove engineering skills through real project case studies — not just resume claims.
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
