@@ -1,9 +1,6 @@
 # Rajit Dakhane — Personal Portfolio
 
 > A fast, accessible, and secure personal portfolio site built to prove engineering skills through real project case studies — not just resume claims.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frd-007%2Fportfolio)
-[![CI Status](https://github.com/rd-007/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/rd-007/portfolio/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
