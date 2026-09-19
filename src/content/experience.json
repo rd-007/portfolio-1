@@ -1,0 +1,25 @@
+[
+  {
+    "id": "exp-innox-intern",
+    "company": "Innox IT Solutions LLP",
+    "title": "Spring Boot Development Intern",
+    "startDate": "2026-01-01",
+    "endDate": "present",
+    "highlights": [
+      "Built RESTful APIs for a subscription-based Delivery Management System using Spring Boot, PostgreSQL, and layered MVC architecture",
+      "Developed billing and order management modules with recurring subscription logic and transactional integrity using Spring Data JPA",
+      "Implemented role-based authentication, documented APIs via Swagger UI, and collaborated on React Native integration using Git workflows"
+    ]
+  },
+  {
+    "id": "exp-education",
+    "company": "Sinhgad Institute of Technology",
+    "title": "Bachelor of Engineering (B.E.) — Computer Engineering",
+    "startDate": "2022-11-21",
+    "endDate": "present",
+    "highlights": [
+      "Capstone projects: RAG-based QA Bot, AI productivity platform, Smart Task Prioritizer",
+      "Relevant coursework: Distributed Systems, Machine Learning, Database Systems, Computer Networks"
+    ]
+  }
+]

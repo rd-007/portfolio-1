@@ -1,0 +1,35 @@
+[
+  {
+    "id": "proj-rag-bot",
+    "title": "RAG-Based QA Bot",
+    "slug": "rag-bot",
+    "problem": "Enterprise knowledge bases are hard to query — employees waste time searching docs instead of getting direct answers.",
+    "techStack": ["TypeScript", "Next.js", "LangChain", "PostgreSQL", "pgvector", "OpenAI API"],
+    "role": "Solo developer — designed architecture, built retrieval pipeline, implemented eval harness.",
+    "outcome": "Achieved 89% answer accuracy on internal eval set; reduced avg. query time from 3 min (manual search) to <3s.",
+    "githubUrl": "https://github.com/rd-007/RAG-Bot",
+    "order": 1
+  },
+  {
+    "id": "proj-ai-assistant",
+    "title": "AI-Powered Multi-Input Assistant",
+    "slug": "ai-assistant",
+    "problem": "Handling multimodal inputs (text, images, documents) through a single interface requires routing to specialized models with fallback logic.",
+    "techStack": ["React 19", "Node.js", "NVIDIA NIM APIs", "Llama 3.1", "Nemotron VL", "Nemotron Parse"],
+    "role": "Solo developer — built React frontend with Node.js server-side proxy, implemented multimodal routing, fallback logic, and client-side file processing.",
+    "outcome": "Deployed on Vercel with serverless functions; per-IP rate limiting at 20 req/min; XSS sanitization; localStorage persistence with blob-stripping.",
+    "githubUrl": "https://github.com/rd-007/AI-Assistant",
+    "order": 2
+  },
+  {
+    "id": "proj-smart-task-prioritizer",
+    "title": "Smart Task Prioritizer",
+    "slug": "smart-task-prioritizer",
+    "problem": "Task management lacks intelligence — users need AI-driven priority scoring, energy-aware scheduling, and habit clustering to prevent burnout.",
+    "techStack": ["Next.js 16", "Python", "FastAPI", "Scikit-Learn", "K-Means", "Prisma", "PostgreSQL", "Docker"],
+    "role": "Solo developer — designed two-service architecture (Next.js frontend + FastAPI AI service), implemented priority scoring, energy-aware scheduling, K-Means habit clustering, burnout detection.",
+    "outcome": "Frontend on Vercel, AI service on Render (non-root Docker), Supabase PostgreSQL, Sentry + PostHog monitoring; sliding-window rate limits, CSP headers, IDOR checks.",
+    "githubUrl": "https://github.com/rd-007/Smart-Task-Prioritizer",
+    "order": 3
+  }
+]
